@@ -44,7 +44,14 @@ final class PlanetRepository: PlanetRepositoryProtocol {
             let publisher = webClient.planets()
             publisher
                 .sink(
-                    receiveCompletion: { _ in },
+                    receiveCompletion: { completion in
+                        switch completion {
+                        case .failure(let error):
+                            print("request failed: \(error.localizedDescription)")
+                        case .finished:
+                            print("request completed successfully")
+                        }
+                    },
                     receiveValue: { planets in
                         // sync values fetched from web client to the CoreData
                         self.dataClient.save(planets: planets)
@@ -58,5 +65,3 @@ final class PlanetRepository: PlanetRepositoryProtocol {
         }
     }
 }
-
-

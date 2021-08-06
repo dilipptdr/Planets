@@ -63,6 +63,7 @@ struct CoreDataClient: CoreDataClientProtocol {
         // use backgroundmanaged object context for write operations
 
         let bgContext = coreData.persistentContainer.newBackgroundContext()
+        bgContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
 
         bgContext.perform {
 

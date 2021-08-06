@@ -97,7 +97,11 @@ final class ViewController: UIViewController {
 extension ViewController: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        viewModel.items(in: section)
+        let items = viewModel.items(in: section)
+        if items > 0 {
+            self.activityIndicator.stopAnimating()
+        }
+        return items
     }
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {

@@ -61,7 +61,7 @@ final class PlanetListViewModel: PlanetListViewModelProtocol {
     }
 
     func items(in section: Int) -> Int {
-        cellModels.count
+        return cellModels.count
     }
 
     func cellViewModel(for item: Int, in section: Int) -> PlanetListCellViewData {

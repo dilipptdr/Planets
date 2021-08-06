@@ -34,7 +34,7 @@ final class NetworkStatusManager: ObservableObject {
             if path.status == .satisfied {
                 self.networkStatus = .connected
             } else {
-                self.networkStatus = .connected
+                self.networkStatus = .notConnected
             }
         }
         monitor.start(queue: queue)

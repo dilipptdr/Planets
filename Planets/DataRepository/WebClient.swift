@@ -21,7 +21,7 @@ protocol WebClientProtocol {
 /// It has dependencies on NetworkService which is used to make network connection and fetch data from network
 struct WebClient: WebClientProtocol {
 
-    private let planetsURLString = "https://swapi.dev/api/planets/"
+    private let planetsURLString = "https://swapi.py4e.com/api/planets/" // https://swapi.dev/api/planets/"
 
     private let networkService: NetworkServiceProtocol
 
@@ -36,6 +36,9 @@ struct WebClient: WebClientProtocol {
         }
 
         let publisher = networkService.httpRequestPublisher(for: url)
+            .mapError(){ error in
+                return error
+             }
             .tryMap() { element -> Data in
                 guard let httpResponse = element.response as? HTTPURLResponse,
                       httpResponse.statusCode == 200 else {
