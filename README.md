@@ -12,4 +12,5 @@ An iOS app to view planets.
 * Used UICollectionView with compositional layout to render the list of planets.
 * No use of any external library
 
-<img width="781" alt="HLD" src="https://user-images.githubusercontent.com/5556540/128597183-fc75b033-e717-4420-a852-195f86caf254.png">
+<img width="716" alt="HDL" src="https://user-images.githubusercontent.com/5556540/128597512-75038309-098b-4b0a-9aae-9f7dd1d6595a.png">
+
