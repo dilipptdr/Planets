@@ -14,3 +14,8 @@ An iOS app to view planets.
 
 <img width="716" alt="HDL" src="https://user-images.githubusercontent.com/5556540/128597512-75038309-098b-4b0a-9aae-9f7dd1d6595a.png">
 
+## Recommendation for future features and improvements:
+* To be able to view more details like thumbnail and small description about planet on each cell of the list.
+* To have search, sort, filter and group planets based on different parameters.
+* To be able to view more details about planet by tapping on one of the items on the list.
+* To be able to share information about a planet via share feature in iOs.
